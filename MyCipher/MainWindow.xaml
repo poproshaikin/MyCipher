@@ -1,0 +1,36 @@
+﻿<Window x:Class="MyCipher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyCipher"
+        mc:Ignorable="d"
+        Title="MyCipher"
+        ResizeMode="NoResize"
+        Height="500"
+        Width="550">
+    <Grid>
+        <TextBlock Text="Enter text: " FontSize="16" Width="80" Margin="30,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <TextBlock Text="Settings" TextAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,133,50,0" Height="25" Width="100" FontSize="16"/>
+        <TextBox x:Name="TextBox_IO" VerticalScrollBarVisibility="Visible" Margin="30" TextWrapping="Wrap" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Width="320" Height="386"/>
+
+        <Button Click="clear_TextBox" x:Name="Button_Clear" Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,33,50,0" Content="Clear"/>
+        
+        <Button Click="encrypt" x:Name="Button_Encrypt" Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,68,50,0" Content="Encrypt"/>
+        <Button Click="decrypt" x:Name="Button_Decrypt" Height="20" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,93,50,0" Content="Decrypt"/>
+        <ComboBox Name="ComboBox_Algorithm" Margin="0,163,30,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="130" SelectionChanged="algorithm_Changed" Text="Choose algorithm" SelectedIndex="0">
+            <ComboBoxItem IsEnabled="False">Choose algorithm</ComboBoxItem>
+            <ComboBoxItem>D123</ComboBoxItem>
+            <ComboBoxItem>NUM2</ComboBoxItem>
+            <ComboBoxItem>CHA</ComboBoxItem>
+        </ComboBox>
+        <ComboBox Name="ComboBox_Layout" Visibility="Hidden" Margin="0,200,30,0" HorizontalAlignment="Right" VerticalAlignment="Top" Width="130" SelectionChanged="layout_Changed" Text="Choose layout" SelectedIndex="0">
+            <ComboBoxItem IsEnabled="False" Content="Choose layout"/>
+            <ComboBoxItem Content="Latin"/>
+            <ComboBoxItem Content="Cyrillic"/>
+        </ComboBox>
+
+    </Grid>
+</Window>
+
+     
