@@ -1,0 +1,15 @@
+MyCipher
+
+DESCRIPTION
+
+WPF program providing the ability to encrypt using multiple custom algorithms
+
+INSTALLATION INSTRUCTION
+
+1. Clone the repository: https://github.com/poproshaikin/MyCipher.git
+2. Open project in your IDE
+3. Enjoy
+
+LICENSE
+
+This project is licensed under the MIT license.
